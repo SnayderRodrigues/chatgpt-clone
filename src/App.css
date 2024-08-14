@@ -1,0 +1,246 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --gray-50: #f9f9f9;
+  --gray-100: #ececec;
+  --gray-200: #e3e3e3;
+  --gray-300: #cdcdcd;
+  --gray-400: #b4b4b4;
+  --gray-500: #9b9b9b;
+  --gray-600: #676767;
+  --gray-700: #424242;
+  --gray-750: #2f2f2f;
+  --gray-800: #212121;
+  --gray-900: #171717;
+  --gray-950: #0d0d0d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif, Helvetica, Apple Color Emoji, Arial,
+    Segoe UI Emoji, Segoe UI Symbol;
+  font-size: 0.875rem;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  color: var(--gray-100);
+  background-color: #212121;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background-color: #171717;
+  padding: 0 0.75rem;
+}
+
+.upperSide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.5rem;
+}
+
+.midSide {
+  padding-right: 0.5rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--gray-400);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  background-color: var(--gray-750);
+}
+
+.button > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.chatGptButton {
+  width: 100%;
+  justify-content: space-between;
+  gap: 0.625rem;
+  color: var(--gray-100);
+}
+
+.chatGptButton span {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.chatGptButton span svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.chatGptButton > svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  visibility: hidden;
+}
+.chatGptButton:hover > svg {
+  visibility: visible;
+}
+
+.exploreGptButton {
+  width: 100%;
+  color: var(--gray-100);
+}
+
+.exploreGptButton > svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.midSideHistory {
+  margin-top: 1.25rem;
+}
+
+.midSideHistory > span {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+}
+
+.historyLog > li {
+  height: auto;
+  position: relative;
+}
+
+.historyLog > li > div {
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.historyLog > li > div:hover {
+  background-color: var(--gray-800);
+}
+
+.historyLog > li > div > a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.historyLog > li > div > a > div {
+  flex-grow: 1;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.historyLog > li > div > a > div > div {
+  --tw-gradient-stops: var(--gray-900) 0%, transparent 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.historyLog > li > div:hover > a > div > div {
+  --tw-gradient-stops: var(--gray-800) 60%, hsla(0, 0%, 100%, 0) 100%;
+  width: 2.5rem;
+}
+
+.historyLog > li > div > div {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding-right: 0.5rem;
+}
+
+.historyLog > li > div:hover > div {
+  display: flex;
+  align-items: center;
+}
+
+.historyLog > li > div > div > span > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-400);
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.historyLog > li > div > div > span > button > svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
